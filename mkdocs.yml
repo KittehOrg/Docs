@@ -1,0 +1,69 @@
+# Project information
+site_name: 'Kitteh!'
+site_description: 'Documentation for Kitteh Projects.'
+site_author: 'Matt Baxter'
+site_url: 'http://kittehorg.github.io/docs/'
+
+# Repository
+repo_name: 'Contribute to these docs!'
+repo_url: 'https://github.com/KittehOrg/Docs'
+edit_uri: 'edit/main/docs/'
+
+# Copyright
+copyright: 'Copyright &copy; 2022 Matt Baxter'
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    scheme: 'slate'
+    primary: 'blue'
+    accent: 'cyan'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  features:
+    - navigation.indexes
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+  custom_dir: overrides
+
+# Page tree
+nav:
+  - Home: index.md
+  - VanishNoPacket:
+      - vanish/index.md
+      - Installation: vanish/install.md
+      - Commands: vanish/commands.md
+      - Configuration: vanish/config.md
+      - Permissions: vanish/permissions.md
+      - FAQ: vanish/faq.md
+
+# Customization
+extra:
+  social:
+    - icon: 'fontawesome/solid/earth-americas'
+      link: 'https://discord.gg/PHpuzZS'
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - toc:
+      permalink: true
